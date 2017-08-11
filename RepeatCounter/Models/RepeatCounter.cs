@@ -7,7 +7,21 @@ namespace RepeatCounterApp.Models
   {
     private int _count;
     private string _wordInput;
+    private string _wordCleaned;
     private string _sentenceInput;
+
+    public int GetCount()
+    {
+      return _count;
+    }
+    public string GetCleanedWord()
+    {
+      return _wordCleaned;
+    }
+    public string GetSentence()
+    {
+      return _sentenceInput;
+    }
 
     public int CountRepeats(string word, string sentence)
     {
@@ -18,9 +32,12 @@ namespace RepeatCounterApp.Models
       else
       {
         // Setting up the counter for keeping track of number of matched words
+        // Assign user input to class properties so we can display them from a model
         _count = 0;
+        _wordInput = word;
+        _sentenceInput = sentence;
         // If multiple words are entered, only takes the first word, split on whitespace
-        word = word.Split(' ')[0];
+        _wordCleaned = word = word.Split(' ')[0];
         // Strips the punctuation from both the word and sentence
         word = RemovePunctuation(word);
         sentence = RemovePunctuation(sentence);

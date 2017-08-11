@@ -2,4 +2,33 @@
   Layout = "_Layout";
 }
 
-<h1>Test</h1>
+<div class="container">
+  <div class="jumbotron">
+    <h1>Results</h1>
+    <a href="/"><button type="button" class="btn btn-primary">New Search</button></a>
+  </div>
+
+  @if(@Model.GetCount() == -1)
+  {
+    <h1>You submitted an invalid search.  Please try again.</h1>
+  }
+  else
+  {
+    <table class="table">
+      <tr class="success">
+        <td class="table-label">Word</td>
+        <td>@Model.GetCleanedWord()</td>
+      </tr>
+    <tr class="info">
+    <td class="table-label">Sentence</td>
+    <td>@Model.GetSentence()</td>
+    </tr>
+    <tr class="warning">
+    <td class="table-label">Matches</td>
+    <td>@Model.GetCount()</td>
+    </tr>
+    </table>
+
+
+  }
+  </div>

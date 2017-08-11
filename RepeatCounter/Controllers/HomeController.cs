@@ -15,7 +15,6 @@ namespace RepeatCounterApp.Controllers
     public ActionResult Result()
     {
       RepeatCounter myCounter = new RepeatCounter();
-      Console.WriteLine(Request.Form["word-input"]);
       myCounter.CountRepeats(Request.Form["word-input"], Request.Form["sentence-input"]);
 
       return View(myCounter);

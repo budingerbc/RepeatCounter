@@ -1,0 +1,17 @@
+body {
+  background-image: url(http://templatemints.com/rttheme13/images/background_images/abstract_background7.jpg);
+  background-size: 100%;
+}
+
+.jumbotron {
+  text-align: center;
+  background-color: #BCBABE;
+}
+
+.table-label {
+  width: 33%;
+}
+
+h1 {
+  text-align: center;
+}

@@ -6,6 +6,7 @@
   <div class="jumbotron">
     <h1>Clunky Word Finder</h1>
   </div>
+
   <form action="/result" method="post">
     <div class="form-group">
       <label for="word">Word Search</label>
@@ -15,6 +16,21 @@
       <label for="sentence">Sentence To Search</label>
         <input class="form-control" type="text" name="sentence-input" placeholder="What sentence do you want to search in?">
     </div>
-    <button type="submit" class="btn btn-primary">Search!</button>
+    <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
   </form>
+
+  <h3>Instructions:</h3>
+  <ol>
+    <li>Enter a word that you want to search for.</li>
+    <li>Enter a sentence that the previous word is to be searched in.</li>
+    <li>The number of occurences of your word will be shown.</li>
+  </ol>
+
+  <h3>Notes:</h3>
+  <ul>
+    <li>If multiple words are entered into the Word field, only the first word will be searched.</li>
+    <li>The search is case sensitive.</li>
+    <li>The search accounts for punctuation and hyphenation.</li>
+    <li>Numbers and special characters will match.</li>
+  </ul>
 </div>
