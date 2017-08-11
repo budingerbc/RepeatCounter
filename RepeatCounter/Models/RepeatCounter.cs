@@ -17,7 +17,6 @@ namespace RepeatCounterApp.Models
         int count = 0;
         // If multiple words are entered, only takes the first word, split on whitespace
         word = word.Split(' ')[0];
-        Console.WriteLine(word);
         // Strips the punctuation from both the word and sentence
         word = RemovePunctuation(word);
         sentence = RemovePunctuation(sentence);
