@@ -12,9 +12,9 @@ _This site will determine how frequently a word appears in a given string_
 * Checking for full word matches
 
 ## Specs
-1. An empty word or string will return 0
+1. An empty word or string will return -1
 * input: ""
-* return: 0
+* return: -1
 ##### Base case test for that lazy user
 2. A single matching word will return 1
 * input: "Epicodus", "Learning at Epicodus is great!"

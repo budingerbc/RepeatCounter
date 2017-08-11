@@ -7,11 +7,11 @@ namespace RepeatCounterApp.Tests
   public class RepeatCounterTest
   {
     [TestMethod]
-    public void CountRepeats_EmptyStringReturnsZero_True()
+    public void CountRepeats_EmptyStringReturnsNegativeOne_True()
     {
       // Arrange
       RepeatCounter count = new RepeatCounter();
-      int expected = 0;
+      int expected = -1;
 
       // Act
       int actual = count.CountRepeats("", "");

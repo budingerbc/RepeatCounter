@@ -5,16 +5,20 @@ namespace RepeatCounterApp.Models
 {
   public class RepeatCounter
   {
+    private int _count;
+    private string _wordInput;
+    private string _sentenceInput;
+
     public int CountRepeats(string word, string sentence)
     {
       if(word.Length == 0 || sentence.Length == 0)
       {
-        return 0;
+        return _count = -1;
       }
       else
       {
         // Setting up the counter for keeping track of number of matched words
-        int count = 0;
+        _count = 0;
         // If multiple words are entered, only takes the first word, split on whitespace
         word = word.Split(' ')[0];
         // Strips the punctuation from both the word and sentence
@@ -26,13 +30,13 @@ namespace RepeatCounterApp.Models
         foreach(string match in splitWords)
         {
           if (word == match)
-            count++;
+            _count++;
         }
-        return count;
+        return _count;
       }
     }
 
-    public string RemovePunctuation(string sentence)
+    private string RemovePunctuation(string sentence)
     {
       // Setting up a StringBuilder to strip punctuation out of the the submitted sentence
       StringBuilder strippedSentence = new StringBuilder();
