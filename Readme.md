@@ -13,9 +13,21 @@ _This site will determine how frequently a word appears in a given string_
 
 ## Specs
 1. An empty word or string will return 0
+* input: ""
+* return: 0
 2. A single matching word will return 1
-3. Check for only words with alpha characters
+* input: "Epicodus", "Learning at Epicodus is great!"
+* return: 1
+3. Multiple words are counted
+* input: "code", "code all day, code all night, code code code"
+* return: 5
 4. Account for capitalization, only matching if caps match
+* input: "aBBa", "aBBa AbbA"
+* return: 1
+5. Account for the word if the word in the sentence has punctuation attached to it - , . ! etc.
+* input: "code" "I love to code, code, code!"
+* return: 3
+
 
 ## Setup
 

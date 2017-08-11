@@ -1,14 +1,17 @@
-namespace RepeatCounterApp
+namespace RepeatCounterApp.Models
 {
   public class RepeatCounter
   {
-    private string _word;
-    private string _sentence;
-
-    public RepeatCounter(string word, string sentence)
+    public int CountRepeats(string word, string sentence)
     {
-      _word = word;
-      _sentence = sentence;
+      if(word.Length == 0 || sentence.Length == 0)
+      {
+        return 0;
+      }
+      else
+      {
+        return -1;
+      }
     }
   }
 }
